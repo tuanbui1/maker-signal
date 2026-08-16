@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maker Signal Field Manual — Q3 2026</title>
+  <meta name="description" content="A weekly operating system for one-person businesses that want live URLs next to the numbers. Written by an AI agent for Tuan Bui. Not for sale yet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f3eee4;
+      --paper-2: #ebe4d6;
+      --ink: #1c1914;
+      --ink-soft: #4a453c;
+      --rule: #c8bfae;
+      --rule-strong: #1c1914;
+      --accent: #7a2d1e;
+      --accent-soft: #f0e2d8;
+      --stamp: #7a2d1e;
+      --card: #faf6ee;
+      --max: 40rem;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      font-optical-sizing: auto;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.18em;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header.mast {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.7rem 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    header.mast .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 2.4rem 0 1.6rem;
+      border-bottom: 3px solid var(--rule-strong);
+    }
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 0.85rem;
+    }
+    h1 {
+      font-size: clamp(2.15rem, 7vw, 3.15rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+    }
+    h1 em {
+      font-style: italic;
+      font-weight: 400;
+      display: block;
+      font-size: 0.58em;
+      letter-spacing: 0;
+      margin-top: 0.25rem;
+      color: var(--ink-soft);
+    }
+    .promise {
+      font-size: 1.2rem;
+      line-height: 1.45;
+      margin: 0;
+      max-width: 38rem;
+    }
+
+    .disclose {
+      margin: 1.4rem 0 0;
+      padding: 1rem 1.1rem;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+    }
+    .disclose strong {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .disclose p { margin: 0; font-size: 1.02rem; }
+
+    .price-band {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.1rem 1.4rem;
+      align-items: start;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .price-figure {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+    }
+    .price-figure small {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-top: 0.35rem;
+    }
+    .stamp {
+      display: inline-block;
+      border: 2px solid var(--stamp);
+      color: var(--stamp);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.5rem;
+      transform: rotate(-2deg);
+      margin: 0 0 0.65rem;
+    }
+    .price-copy { margin: 0; color: var(--ink); }
+    .price-copy + .price-copy { margin-top: 0.7rem; }
+    .price-note { font-size: 0.95rem; color: var(--ink-soft); }
+
+    h2 {
+      font-size: 1.55rem;
+      line-height: 1.2;
+      margin: 0 0 0.85rem;
+      letter-spacing: -0.015em;
+    }
+    section {
+      padding: 1.85rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    section p.lead { margin: 0 0 1rem; }
+
+    ol.inside {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: item;
+    }
+    ol.inside li {
+      counter-increment: item;
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.55rem;
+      padding: 0.65rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    ol.inside li:last-child { border-bottom: 1px solid var(--rule); }
+    ol.inside li::before {
+      content: counter(item, decimal-leading-zero);
+      font-variant-numeric: tabular-nums;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      padding-top: 0.12rem;
+    }
+
+    .split {
+      display: grid;
+      gap: 1.4rem;
+    }
+    @media (min-width: 640px) {
+      .split { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    .who ul {
+      margin: 0;
+      padding: 0 0 0 1.1rem;
+    }
+    .who li { margin: 0.4rem 0; }
+    .who h3 {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 0.6rem;
+    }
+    .who .not h3 { color: var(--accent); }
+
+    .proofs { display: grid; gap: 1rem; }
+    article.proof {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      padding: 1rem 1.1rem 1.05rem;
+    }
+    article.proof .n {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 0.4rem;
+    }
+    article.proof p { margin: 0 0 0.65rem; }
+    article.proof cite {
+      font-style: normal;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+
+    .wait {
+      background: var(--paper-2);
+      padding: 1.1rem 1.1rem 1.2rem;
+    }
+    .wait label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.35rem;
+    }
+    .wait-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .wait input {
+      flex: 1 1 12rem;
+      min-width: 0;
+      font: inherit;
+      font-size: 1rem;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--rule);
+      background: #f7f3ea;
+      color: var(--ink-soft);
+      cursor: not-allowed;
+    }
+    .wait button {
+      font: inherit;
+      font-size: 0.95rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--rule);
+      background: #e4ddd0;
+      color: var(--ink-soft);
+      cursor: not-allowed;
+    }
+    .wait .note {
+      margin: 0.75rem 0 0;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .tiers {
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+      margin: 0.9rem 0 0;
+    }
+
+    footer {
+      padding: 2rem 0 2.6rem;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+    }
+    footer p { margin: 0 0 0.7rem; }
+    footer .legal {
+      border-top: 1px solid var(--rule);
+      padding-top: 0.9rem;
+      margin-top: 0.4rem;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <span>Maker Signal · Experiment 001</span>
+      <span>Compiled 16 August 2026</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="kicker">A file, not a SaaS · Q3 2026</p>
+        <h1>Maker Signal <em>Field Manual</em></h1>
+        <p class="promise">A weekly operating system for one-person businesses that want live URLs next to the numbers — including the flops, the 0.62% median, and the lanes the slop filters just crushed.</p>
+        <aside class="disclose" aria-label="Author disclosure">
+          <strong>Written by an AI. Owned by a person.</strong>
+          <p>Maker Signal is written by an AI agent (Twitter Bot) working for Tuan Bui. Tuan is the owner. Any money belongs to Tuan. We use AI to research and draft; we do not invent numbers, screenshots, or testimonials. If a claim does not have a live source, it does not ship. This is not financial, tax, or legal advice.</p>
+        </aside>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="price-band" aria-labelledby="price-heading">
+        <div>
+          <div class="price-figure">$39 <small>standard · suggested</small></div>
+        </div>
+        <div>
+          <p class="stamp">Not for sale yet</p>
+          <h2 id="price-heading" hidden>Price</h2>
+          <p class="price-copy">Coming soon. There is no checkout on this page. No card is taken. No account is created. Listing, KYC, and payouts wait for Tuan Bui.</p>
+          <p class="price-copy price-note">The $30–$49 band is where InsightRaider’s June 2026 cut of 146,271 Gumroad products converts about 28% better than sub-$10 listings. Software averages $39.95. Those are public-listing estimates, not a promise this file will sell. We will not add a $9 impulse SKU.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="inside">
+        <h2 id="inside">What’s inside</h2>
+        <p class="lead">One Markdown file. Enough to run next Sunday without reading the four source issues.</p>
+        <ol class="inside">
+          <li>A one-page operating system: own a list; ship related things; price like a solution; write the stop-loss; disclose first.</li>
+          <li>The four money-object table — newsletter, file, tool portfolio, productized service — with 2026 price anchors and kill lines.</li>
+          <li>Pricing rules for files ($30–$49), newsletters ($10 / $100 default; business $15), and services (a published offer, not hourly).</li>
+          <li>The paid-flip decision: median math, conversion and churn tables, a 10-point “do not flip yet” checklist.</li>
+          <li>The kill system: feeling test, $12K guilt-machine case, nine-of-ten cadence, kill-or-commit, a 10-point Sunday checklist.</li>
+          <li>Q3 2026 disclosure and distribution map (YouTube, Substack, Medium, X, owned email, EU Article 50).</li>
+          <li>The Sunday loop you can print.</li>
+          <li>Owner-gated work (checkout, KYC, host, posting) so an agent or a Sunday operator does not fake a storefront.</li>
+          <li>The source table — 40 live URLs we opened. Empty cells stay empty.</li>
+        </ol>
+        <p class="tiers">Optional staged tiers, not listed live: $69 Operator pack (source-table spreadsheet, Sunday worksheet, kill-criteria scorecard). $129 Studio pack (four source issues as appendix, X-thread template, 48-hour paid-onboarding draft, “How I make this” kit). Still no live support. Still not for sale.</p>
+      </section>
+
+      <section class="who" aria-labelledby="audience">
+        <h2 id="audience">Who it’s for — and not</h2>
+        <div class="split">
+          <div>
+            <h3>For</h3>
+            <ul>
+              <li>Solo makers, indie hackers, and AI-assisted operators who will tolerate an AI author if the work is sourced, disclosed, and usable this week.</li>
+              <li>People who need a kill-criteria practice more than another launch idea.</li>
+              <li>Readers who want live URLs next to the numbers, including the flops.</li>
+            </ul>
+          </div>
+          <div class="not">
+            <h3>Not for</h3>
+            <ul>
+              <li>Day traders and anyone looking for trade ideas.</li>
+              <li>Anyone who wants a video clipper or shorts product.</li>
+              <li>Readers who want the AI author hidden.</li>
+              <li>People hunting prompt packs, faceless-YouTube playbooks, or undisclosed AI content farms.</li>
+              <li>Anyone who needs a live community, DMs, or “done for you” fulfillment. This is a file.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="proof">
+        <h2 id="proof">Three numbers we actually opened</h2>
+        <p class="lead">Not testimonials. Not screenshots. Each claim links the page we used.</p>
+        <div class="proofs">
+          <article class="proof">
+            <p class="n">01 · Price the file</p>
+            <p>On 146,271 public Gumroad listings, the $30–$49 band converts about 28% better than sub-$10 equivalents. Products under $10 are roughly 35% of listings and about 0.8% of platform revenue. 44% of products have generated exactly $0 lifetime. Estimates, not audited payouts.</p>
+            <cite>Source: <a href="https://insightraider.com/en/answers/how-to-price-digital-templates">InsightRaider, How to Price Digital Products on Gumroad in 2026</a></cite>
+          </article>
+          <article class="proof">
+            <p class="n">02 · Stay free until paid is a product</p>
+            <p>Median free-to-paid conversion on beehiiv is 0.62%. The typical creator who already charged flipped paid around day 45 — a median of people who charged, not a permission slip. The AI vertical leaks 13.33% of paid subscribers a month.</p>
+            <cite>Source: <a href="https://www.beehiiv.com/blog/the-state-of-paid-newsletters-2026">beehiiv, The State of Paid Newsletters 2026</a></cite>
+          </article>
+          <article class="proof">
+            <p class="n">03 · Disclose first. The audience already voted.</p>
+            <p>Trust in news overall is 37%. Trust in answers from AI chatbots is 20% globally. A reader who meets an AI-authored brief is starting from that number, not a blank slate. Hiding the author spends the remaining trust.</p>
+            <cite>Source: <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary">Reuters Institute, Digital News Report 2026</a></cite>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="waitlist">
+        <h2 id="waitlist">Waitlist</h2>
+        <p class="lead">When Tuan can run checkout, this is where a list would live. It does not live here yet.</p>
+        <div class="wait">
+          <form>
+            <label for="email">Email</label>
+            <div class="wait-row">
+              <input id="email" name="email" type="email" placeholder="you@example.com" disabled autocomplete="off">
+              <button type="button" disabled>Notify me — not live</button>
+            </div>
+          </form>
+          <p class="note" id="waitlist-note">This list is not live. The field is disabled on purpose. It does not collect addresses and does not POST anywhere. Do not treat a screenshot of this box as a launch.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>If this reads like a 2024 listicle, we failed. If a solo operator can run next Sunday from the print-out without opening the four issues, we passed. If they would only trust it if we hid the AI, they are not the reader.</p>
+      <p class="legal">Written by an AI agent (Twitter Bot) for Tuan Bui. Not financial advice. No accounts. No posting. No spend. Not a live storefront.</p>
+    </div>
+  </footer>
+</body>
+</html>
