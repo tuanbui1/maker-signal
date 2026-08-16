@@ -48,6 +48,7 @@
       color: var(--ink-soft);
     }
     header.mast .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    header.mast nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
     .hero { padding: 2.1rem 0 1.4rem; border-bottom: 3px solid var(--rule-strong); }
     .kicker {
       font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -202,6 +203,11 @@
   <header class="mast">
     <div class="wrap">
       <span>Maker Signal · Experiment 002</span>
+      <nav aria-label="Site">
+        <a href="index.html">Field Manual</a>
+        <a href="toolkit.html">Toolkit</a>
+        <a href="how-i-make-this.html">How I make this</a>
+      </nav>
       <span>16 August 2026</span>
     </div>
   </header>
@@ -378,17 +384,17 @@
       return Number.isFinite(n) ? n : 0;
     }
     function money(n) {
-      if (!Number.isFinite(n)) return "—";
+      if (!Number.isFinite(n)) return "\u2014";
       var abs = Math.abs(n);
       var digits = Math.abs(n - Math.round(n)) < 1e-9 ? 0 : 2;
       return "$" + n.toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
     }
     function num(n, d) {
-      if (!Number.isFinite(n)) return "—";
+      if (!Number.isFinite(n)) return "\u2014";
       return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
     }
     function pct(n, d) {
-      if (!Number.isFinite(n)) return "—";
+      if (!Number.isFinite(n)) return "\u2014";
       return num(n, d) + "%";
     }
 
@@ -487,18 +493,18 @@
 
       $("nl-outs").innerHTML =
         card("Paying subscribers", num(paying, paying === Math.round(paying) ? 0 : 1),
-          num(list, 0) + " × " + pct(convPct, 2) + " — a median snapshot, not your conversion") +
+          num(list, 0) + " \u00d7 " + pct(convPct, 2) + " \u2014 a median snapshot, not your conversion") +
         card("Monthly revenue", money(mrr),
-          mix > 0 ? "Blended: monthly payers at the monthly price, annual payers at yearly ÷ 12" : "All-monthly snapshot. Grey Journal’s 1,000 × $10 × 0.62% line is ~$62") +
+          mix > 0 ? "Blended: monthly payers at the monthly price, annual payers at yearly \u00f7 12" : "All-monthly snapshot. Grey Journal\u2019s 1,000 \u00d7 $10 \u00d7 0.62% line is ~$62") +
         card("Annual revenue (snapshot)", money(arr),
-          "Twelve times the monthly snapshot, or yearly price × annual payers. Ignores churn and new signups") +
+          "Twelve times the monthly snapshot, or yearly price \u00d7 annual payers. Ignores churn and new signups") +
         card("Estimated LTV", money(ltv),
-          "Monthly price ÷ monthly churn. At $10 and 13.33% this is ~$75 — our arithmetic from beehiiv’s formula, not a printed AI-vertical LTV") +
+          "Monthly price \u00f7 monthly churn. At $10 and 13.33% this is ~$75 \u2014 our arithmetic from beehiiv\u2019s formula, not a printed AI-vertical LTV") +
         card("12-month remaining cohort", pct(remain, 1),
-          "(1 − " + pct(churnPct, 2) + ")¹² = " + pct(remain, 2) + ". beehiiv: 5% churn ≈ 54% still paying; 17% ≈ 11%");
+          "(1 \u2212 " + pct(churnPct, 2) + ")\u00b9\u00b2 = " + pct(remain, 2) + ". beehiiv: 5% churn \u2248 54% still paying; 17% \u2248 11%");
 
       $("nl-caveat").innerHTML =
-        "Not a promise. Median free-to-paid conversion is 0.62% on beehiiv’s paid report; 5–10% is top-decile execution sold as baseline. " +
+        "Not a promise. Median free-to-paid conversion is 0.62% on beehiiv\u2019s paid report; 5\u201310% is top-decile execution sold as baseline. " +
         "AI leaks 13.33% of paid subscribers a month (~" + num(months, 1) + " months of simple lifetime at that rate). " +
         "Empty cells in the source tables stay empty. Gross is not net.";
     }
@@ -539,22 +545,22 @@
         if (t.raw === "" || t.price <= 0) return;
         var keep = tierKeep(t.price, take);
         var sales = salesTo(keep);
-        html += '<article class="out"><p class="k">' + t.label + " · " + money(t.price) + "</p>" +
+        html += '<article class="out"><p class="k">' + t.label + " \u00b7 " + money(t.price) + "</p>" +
           '<p class="v">' + money(keep) + " keep</p>" +
-          '<p class="s">' + (Number.isFinite(sales) ? num(Math.ceil(sales), 0) + " sales to net $1,000 (" + num(sales, 1) + " exact)</p></article>" : "—</p></article>");
+          '<p class="s">' + (Number.isFinite(sales) ? num(Math.ceil(sales), 0) + " sales to net $1,000 (" + num(sales, 1) + " exact)</p></article>" : "\u2014</p></article>");
         if (t.price < 10) under10.push(money(t.price));
       });
-      $("fp-outs").innerHTML = html || '<article class="out"><p class="k">No price</p><p class="v">—</p><p class="s">Enter a list price.</p></article>';
+      $("fp-outs").innerHTML = html || '<article class="out"><p class="k">No price</p><p class="v">\u2014</p><p class="s">Enter a list price.</p></article>';
       $("fp-note").innerHTML =
-        "The $30–$49 band converts about 28% better than sub-$10 equivalents on InsightRaider’s June 2026 cut of 146,271 Gumroad products. " +
+        "The $30\u2013$49 band converts about 28% better than sub-$10 equivalents on InsightRaider\u2019s June 2026 cut of 146,271 Gumroad products. " +
         "Under $10 is roughly 35% of listings and about 0.8% of platform revenue. 44% of products have generated exactly $0 lifetime. " +
-        "Two or three tiers generate about 2× the revenue of a single price. Estimates, not a promise this file will sell. " +
+        "Two or three tiers generate about 2\u00d7 the revenue of a single price. Estimates, not a promise this file will sell. " +
         '<a href="https://insightraider.com/en/answers/how-to-price-digital-templates">Source</a>. ' +
-        "At $49 and 13.2% you keep roughly $42. The playbook’s $9.99 → ~$8.40 / ~119 sales used a coarser keep; this page uses price × (1 − take).";
+        "At $49 and 13.2% you keep roughly $42. The playbook\u2019s $9.99 \u2192 ~$8.40 / ~119 sales used a coarser keep; this page uses price \u00d7 (1 \u2212 take).";
       var warn = $("fp-warn");
       if (under10.length) {
         warn.classList.remove("hidden");
-        warn.innerHTML = "Price below $10 (" + under10.join(", ") + "). That is the catalog trap: about a third of listings and under one percent of the money. Do not add a $9 impulse SKU to “complete the ladder.”";
+        warn.innerHTML = "Price below $10 (" + under10.join(", ") + "). That is the catalog trap: about a third of listings and under one percent of the money. Do not add a $9 impulse SKU to \u201ccomplete the ladder.\u201d";
       } else {
         warn.classList.add("hidden");
         warn.textContent = "";
@@ -563,34 +569,34 @@
 
     /* ---- kill scorecard ---- */
     var QUESTIONS = [
-      { id: "q1", title: "01 · The three numbers",
-        blurb: "Can you write last-90-day actual revenue (not projected), hours per week including thinking, and opportunity cost on your current best activity — on one line?",
+      { id: "q1", title: "01 \u00b7 The three numbers",
+        blurb: "Can you write last-90-day actual revenue (not projected), hours per week including thinking, and opportunity cost on your current best activity \u2014 on one line?",
         labels: ["No", "Two of three", "Yes, all three"] },
-      { id: "q2", title: "02 · Carrying or dragging",
-        blurb: "Pessagno’s feeling test: is this product carrying you, or are you dragging a lifeless body uphill? If you have to argue yourself into “carrying,” it is dragging.",
+      { id: "q2", title: "02 \u00b7 Carrying or dragging",
+        blurb: "Pessagno\u2019s feeling test: is this product carrying you, or are you dragging a lifeless body uphill? If you have to argue yourself into \u201ccarrying,\u201d it is dragging.",
         labels: ["I am dragging it", "Unsure", "It is carrying me"] },
-      { id: "q3", title: "03 · Zero, zombie, or business",
-        blurb: "Write the age of the product next to the MRR. Low-but-not-zero after a year of grinding is a zombie — worse than a clean zero. A number that can pay the humans is a business.",
+      { id: "q3", title: "03 \u00b7 Zero, zombie, or business",
+        blurb: "Write the age of the product next to the MRR. Low-but-not-zero after a year of grinding is a zombie \u2014 worse than a clean zero. A number that can pay the humans is a business.",
         labels: ["Zombie MRR", "Zero / too new", "Pays the humans"] },
-      { id: "q4", title: "04 · Retention before MRR",
-        blurb: "Have you split logo retention or lifetime months by segment this month? Cadence’s agencies stayed 14+ months; Product Hunt solos left in under four. Growing top-line MRR can hide that.",
+      { id: "q4", title: "04 \u00b7 Retention before MRR",
+        blurb: "Have you split logo retention or lifetime months by segment this month? Cadence\u2019s agencies stayed 14+ months; Product Hunt solos left in under four. Growing top-line MRR can hide that.",
         labels: ["Not split", "Partial", "Split this month"] },
-      { id: "q5", title: "05 · Did the pipe actually run?",
+      { id: "q5", title: "05 \u00b7 Did the pipe actually run?",
         blurb: "Checkout exists, is not returning a 500, and a stranger can pay. If the pipe is broken, you do not have a demand signal. You have an instrumentation bug.",
         labels: ["Broken or missing", "Exists, untested", "Stranger can pay"] },
-      { id: "q6", title: "06 · Unit economics on a calendar",
+      { id: "q6", title: "06 \u00b7 Unit economics on a calendar",
         blurb: "Price a user will pay versus cost to serve, including your hours at a rate you could earn elsewhere. If you are more than three months in and still have no written cost-per-user kill threshold, that is a zero.",
         labels: ["No / cost > price", "Drafted", "Written and passing"] },
-      { id: "q7", title: "07 · Related to the portfolio",
-        blurb: "Same user, same problem space, same taste — or a stranger idea you copied off Indie Hackers? A related miss leaves you code and language. A stranger miss is tuition you pay twice.",
+      { id: "q7", title: "07 \u00b7 Related to the portfolio",
+        blurb: "Same user, same problem space, same taste \u2014 or a stranger idea you copied off Indie Hackers? A related miss leaves you code and language. A stranger miss is tuition you pay twice.",
         labels: ["Stranger idea", "Adjacent", "Related fork"] },
-      { id: "q8", title: "08 · Hit-rate this month",
-        blurb: "Of the last ten experiments, how many died on a pre-written date? If all ten are still “up” because Stripe might trickle, you do not have a hit-rate. You have a hoard.",
-        labels: ["Hoard — all still up", "Some killed", "Dates, and they die"] },
-      { id: "q9", title: "09 · Kill or commit — no third state",
-        blurb: "Lenhard: every struggling project gets kill, or commit with more resources. “Pause” and “maintenance” without a date are how zombies request a new lease.",
+      { id: "q8", title: "08 \u00b7 Hit-rate this month",
+        blurb: "Of the last ten experiments, how many died on a pre-written date? If all ten are still \u201cup\u201d because Stripe might trickle, you do not have a hit-rate. You have a hoard.",
+        labels: ["Hoard \u2014 all still up", "Some killed", "Dates, and they die"] },
+      { id: "q9", title: "09 \u00b7 Kill or commit \u2014 no third state",
+        blurb: "Lenhard: every struggling project gets kill, or commit with more resources. \u201cPause\u201d and \u201cmaintenance\u201d without a date are how zombies request a new lease.",
         labels: ["Pause, no date", "Leaning", "Kill or commit written"] },
-      { id: "q10", title: "10 · Kill like you will ship again",
+      { id: "q10", title: "10 \u00b7 Kill like you will ship again",
         blurb: "Cadence gave 90 days, a migration path, refunds they did not owe. Quiet domain-lapse teaches remaining users that you disappear.",
         labels: ["Quiet lapse", "Partial plan", "Generous ending ready"] }
     ];
@@ -639,19 +645,19 @@
       if (pipeBroken && otherKills < 3) {
         verdict = "Commit one week";
         cls = "commit";
-        text = "Checkout is broken or missing. That is not a demand signal. Commit one week to make a stranger able to pay, then run this card again. Do not treat “zero revenue” as a kill until the pipe has actually run — unless the rest of the card is already a zombie you are dragging.";
+        text = "Checkout is broken or missing. That is not a demand signal. Commit one week to make a stranger able to pay, then run this card again. Do not treat \u201czero revenue\u201d as a kill until the pipe has actually run \u2014 unless the rest of the card is already a zombie you are dragging.";
       } else if (otherKills >= 3 || (!pipeBroken && killSignals >= 3)) {
         verdict = "Kill";
         cls = "";
-        text = "Three or more kill signals on items 1–8. Field Manual: stop within 48 hours, tell anyone owed notice, archive (do not delete), reallocate the hours, set a 30-day reminder so you do not quietly resume. Kill like someone who will ship again (item 10).";
+        text = "Three or more kill signals on items 1\u20138. Field Manual: stop within 48 hours, tell anyone owed notice, archive (do not delete), reallocate the hours, set a 30-day reminder so you do not quietly resume. Kill like someone who will ship again (item 10).";
       } else if (killSignals >= 2 || total <= 13) {
         verdict = "Commit one week";
         cls = "commit";
-        text = "Two or fewer hard kill signals, or a mixed score. Commit with conditions: three specific milestones, at least more time this week, a review date, and auto-kill if you miss. “Pause” without a date is not on this card.";
+        text = "Two or fewer hard kill signals, or a mixed score. Commit with conditions: three specific milestones, at least more time this week, a review date, and auto-kill if you miss. \u201cPause\u201d without a date is not on this card.";
       } else {
         verdict = "Keep";
         cls = "keep";
-        text = "The product is carrying weight and the pipe has run. Keep — and still write this week’s kill date on the weakest of your last ten experiments. Hit-rate is the strategy. A portfolio of zombies is a support desk with extra domains.";
+        text = "The product is carrying weight and the pipe has run. Keep \u2014 and still write this week\u2019s kill date on the weakest of your last ten experiments. Hit-rate is the strategy. A portfolio of zombies is a support desk with extra domains.";
       }
       return { stamp: verdict, cls: cls, score: total, kills: killSignals, text: text };
     }
@@ -659,10 +665,10 @@
       var rec = recommend(answers());
       var bits = '<p class="stamp ' + rec.cls + '">' + rec.stamp + "</p>";
       if (rec.score !== null) {
-        bits += '<p class="scoreline">Score ' + rec.score + " / 20 · " + rec.kills + " kill signal" + (rec.kills === 1 ? "" : "s") + " on items 1–8</p>";
+        bits += '<p class="scoreline">Score ' + rec.score + " / 20 \u00b7 " + rec.kills + " kill signal" + (rec.kills === 1 ? "" : "s") + " on items 1\u20138</p>";
       }
       bits += "<p>" + rec.text + "</p>";
-      bits += '<p class="note">Plain-language recommend only. Not financial advice. Lenhard’s “three or more kill signals means kill” and the Field Manual’s “fail two or more of 1–8 → item 9 the same day” are the rules this card implements. A broken checkout (item 5) is held out of the kill pile until you fix the pipe.</p>';
+      bits += '<p class="note">Plain-language recommend only. Not financial advice. Lenhard\u2019s \u201cthree or more kill signals means kill\u201d and the Field Manual\u2019s \u201cfail two or more of 1\u20138 \u2192 item 9 the same day\u201d are the rules this card implements. A broken checkout (item 5) is held out of the kill pile until you fix the pipe.</p>';
       $("ks-verdict").innerHTML = bits;
     }
     function loadStore() {
@@ -684,9 +690,9 @@
       }
       var html = "<h3>Local history</h3><table><thead><tr><th>Date</th><th>Product</th><th>Score</th><th>Recommend</th></tr></thead><tbody>";
       rows.forEach(function (r) {
-        html += "<tr><td>" + (r.date || "—") + "</td><td>" + escapeHtml(r.name || "—") + "</td><td>" +
-          (r.score !== null && r.score !== undefined ? r.score + "/20" : "—") + "</td><td>" +
-          escapeHtml(r.verdict || "—") + "</td></tr>";
+        html += "<tr><td>" + (r.date || "\u2014") + "</td><td>" + escapeHtml(r.name || "\u2014") + "</td><td>" +
+          (r.score !== null && r.score !== undefined ? r.score + "/20" : "\u2014") + "</td><td>" +
+          escapeHtml(r.verdict || "\u2014") + "</td></tr>";
       });
       $("ks-history").innerHTML = html + "</tbody></table>";
     }
