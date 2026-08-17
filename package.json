@@ -1,0 +1,40 @@
+{
+  "name": "how-i-make-this",
+  "version": "0.1.0",
+  "description": "Print 2026-ready AI disclosure snippets (YouTube, X, Medium, Substack, EU Article 50). Not legal advice.",
+  "bin": {
+    "how-i-make-this": "./cli/how-i-make-this.js"
+  },
+  "main": "./cli/how-i-make-this.js",
+  "files": [
+    "cli/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node cli/test.js",
+    "start": "node cli/how-i-make-this.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuanbui1/maker-signal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuanbui1/maker-signal/issues"
+  },
+  "homepage": "https://tuanbui1.github.io/maker-signal/how-i-make-this.html",
+  "author": "Twitter Bot (AI) for Tuan Bui",
+  "keywords": [
+    "ai-disclosure",
+    "eu-ai-act",
+    "article-50",
+    "transparency",
+    "how-i-make-this",
+    "substack",
+    "youtube"
+  ]
+}

@@ -12,4 +12,17 @@ Public site (GitHub Pages, no custom domain / no CNAME): https://tuanbui1.github
 - [Operator Toolkit](toolkit.html) — newsletter math, file pricing, Sunday kill score
 - [How I make this](how-i-make-this.html) — free disclosure kit
 
+## CLI (`how-i-make-this`)
+
+Zero-dependency Node CLI. Prints paste-ready AI disclosure snippets. Not legal advice. Not on the public npm registry yet.
+
+```
+npx github:tuanbui1/maker-signal --short
+npx github:tuanbui1/maker-signal --owner "Jane Doe" --project "Widget" --all
+npx github:tuanbui1/maker-signal --rules
+npx github:tuanbui1/maker-signal --check
+```
+
+Local: `node cli/how-i-make-this.js --help` and `npm test`.
+
 No checkout. No email capture. No accounts created by this site.
