@@ -22,7 +22,6 @@
       --card: #faf6ee;
       --max: 40rem;
     }
-
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
     body {
@@ -34,18 +33,9 @@
       line-height: 1.55;
       font-optical-sizing: auto;
     }
-
-    a {
-      color: var(--accent);
-      text-underline-offset: 0.18em;
-    }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
     a:hover { text-decoration-thickness: 2px; }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 2rem));
-      margin: 0 auto;
-    }
-
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
     header.mast {
       border-bottom: 1px solid var(--rule);
       padding: 0.7rem 0;
@@ -54,239 +44,92 @@
       text-transform: uppercase;
       color: var(--ink-soft);
     }
-    header.mast .wrap {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    header.mast nav {
-      display: flex;
-      gap: 1.1rem;
-      flex-wrap: wrap;
-    }
-
-    .hero {
-      padding: 2.4rem 0 1.6rem;
-      border-bottom: 3px solid var(--rule-strong);
-    }
+    header.mast .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    header.mast nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+    .hero { padding: 2.4rem 0 1.6rem; border-bottom: 3px solid var(--rule-strong); }
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin: 0 0 0.85rem;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-soft); margin: 0 0 0.85rem;
     }
     h1 {
       font-size: clamp(2.15rem, 7vw, 3.15rem);
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 1rem;
+      line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 1rem;
     }
     h1 em {
-      font-style: italic;
-      font-weight: 400;
-      display: block;
-      font-size: 0.58em;
-      letter-spacing: 0;
-      margin-top: 0.25rem;
-      color: var(--ink-soft);
+      font-style: italic; font-weight: 400; display: block; font-size: 0.58em;
+      letter-spacing: 0; margin-top: 0.25rem; color: var(--ink-soft);
     }
-    .promise {
-      font-size: 1.2rem;
-      line-height: 1.45;
-      margin: 0;
-      max-width: 38rem;
-    }
-
+    .promise { font-size: 1.2rem; line-height: 1.45; margin: 0; max-width: 38rem; }
     .disclose {
-      margin: 1.4rem 0 0;
-      padding: 1rem 1.1rem;
-      background: var(--accent-soft);
-      border-left: 4px solid var(--accent);
+      margin: 1.4rem 0 0; padding: 1rem 1.1rem;
+      background: var(--accent-soft); border-left: 4px solid var(--accent);
     }
     .disclose strong {
-      display: block;
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
+      display: block; font-size: 0.78rem; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.4rem;
     }
     .disclose p { margin: 0; font-size: 1.02rem; }
-
     .price-band {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.1rem 1.4rem;
-      align-items: start;
-      padding: 1.6rem 0;
-      border-bottom: 1px solid var(--rule);
+      display: grid; grid-template-columns: auto 1fr; gap: 1.1rem 1.4rem;
+      align-items: start; padding: 1.6rem 0; border-bottom: 1px solid var(--rule);
     }
-    .price-figure {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 0.9;
-      letter-spacing: -0.03em;
-    }
+    .price-figure { font-size: 3rem; font-weight: 700; line-height: 0.9; letter-spacing: -0.03em; }
     .price-figure small {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin-top: 0.35rem;
+      display: block; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-soft); margin-top: 0.35rem;
     }
     .stamp {
-      display: inline-block;
-      border: 2px solid var(--stamp);
-      color: var(--stamp);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.28rem 0.5rem;
-      transform: rotate(-2deg);
-      margin: 0 0 0.65rem;
+      display: inline-block; border: 2px solid var(--stamp); color: var(--stamp);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.28rem 0.5rem; transform: rotate(-2deg); margin: 0 0 0.65rem;
     }
     .price-copy { margin: 0; color: var(--ink); }
     .price-copy + .price-copy { margin-top: 0.7rem; }
     .price-note { font-size: 0.95rem; color: var(--ink-soft); }
-
-    h2 {
-      font-size: 1.55rem;
-      line-height: 1.2;
-      margin: 0 0 0.85rem;
-      letter-spacing: -0.015em;
-    }
-    section {
-      padding: 1.85rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
+    h2 { font-size: 1.55rem; line-height: 1.2; margin: 0 0 0.85rem; letter-spacing: -0.015em; }
+    section { padding: 1.85rem 0; border-bottom: 1px solid var(--rule); }
     section p.lead { margin: 0 0 1rem; }
-
-    ol.inside {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      counter-reset: item;
-    }
+    ol.inside { margin: 0; padding: 0; list-style: none; counter-reset: item; }
     ol.inside li {
-      counter-increment: item;
-      display: grid;
-      grid-template-columns: 2rem 1fr;
-      gap: 0.55rem;
-      padding: 0.65rem 0;
-      border-top: 1px solid var(--rule);
+      counter-increment: item; display: grid; grid-template-columns: 2rem 1fr; gap: 0.55rem;
+      padding: 0.65rem 0; border-top: 1px solid var(--rule);
     }
     ol.inside li:last-child { border-bottom: 1px solid var(--rule); }
     ol.inside li::before {
       content: counter(item, decimal-leading-zero);
-      font-variant-numeric: tabular-nums;
-      color: var(--ink-soft);
-      font-size: 0.92rem;
-      padding-top: 0.12rem;
+      font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 0.92rem; padding-top: 0.12rem;
     }
-
-    .split {
-      display: grid;
-      gap: 1.4rem;
-    }
-    @media (min-width: 640px) {
-      .split { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    }
-    .who ul {
-      margin: 0;
-      padding: 0 0 0 1.1rem;
-    }
+    .split { display: grid; gap: 1.4rem; }
+    @media (min-width: 640px) { .split { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    .who ul { margin: 0; padding: 0 0 0 1.1rem; }
     .who li { margin: 0.4rem 0; }
-    .who h3 {
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0 0 0.6rem;
-    }
+    .who h3 { font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.6rem; }
     .who .not h3 { color: var(--accent); }
-
     .proofs { display: grid; gap: 1rem; }
-    article.proof {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      padding: 1rem 1.1rem 1.05rem;
-    }
+    article.proof { background: var(--card); border: 1px solid var(--rule); padding: 1rem 1.1rem 1.05rem; }
     article.proof .n {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin: 0 0 0.4rem;
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink-soft); margin: 0 0 0.4rem;
     }
     article.proof p { margin: 0 0 0.65rem; }
-    article.proof cite {
-      font-style: normal;
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-    }
-
-    .wait {
-      background: var(--paper-2);
-      padding: 1.1rem 1.1rem 1.2rem;
-    }
-    .wait label {
-      display: block;
-      font-size: 0.85rem;
-      margin-bottom: 0.35rem;
-    }
-    .wait-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    article.proof cite { font-style: normal; font-size: 0.92rem; color: var(--ink-soft); }
+    .wait { background: var(--paper-2); padding: 1.1rem 1.1rem 1.2rem; }
+    .wait label { display: block; font-size: 0.85rem; margin-bottom: 0.35rem; }
+    .wait-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .wait input {
-      flex: 1 1 12rem;
-      min-width: 0;
-      font: inherit;
-      font-size: 1rem;
-      padding: 0.55rem 0.7rem;
-      border: 1px solid var(--rule);
-      background: #f7f3ea;
-      color: var(--ink-soft);
-      cursor: not-allowed;
+      flex: 1 1 12rem; min-width: 0; font: inherit; font-size: 1rem;
+      padding: 0.55rem 0.7rem; border: 1px solid var(--rule);
+      background: #f7f3ea; color: var(--ink-soft); cursor: not-allowed;
     }
     .wait button {
-      font: inherit;
-      font-size: 0.95rem;
-      padding: 0.55rem 0.9rem;
-      border: 1px solid var(--rule);
-      background: #e4ddd0;
-      color: var(--ink-soft);
-      cursor: not-allowed;
+      font: inherit; font-size: 0.95rem; padding: 0.55rem 0.9rem;
+      border: 1px solid var(--rule); background: #e4ddd0; color: var(--ink-soft); cursor: not-allowed;
     }
-    .wait .note {
-      margin: 0.75rem 0 0;
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-    }
-
-    .tiers {
-      font-size: 0.98rem;
-      color: var(--ink-soft);
-      margin: 0.9rem 0 0;
-    }
-
-    footer {
-      padding: 2rem 0 2.6rem;
-      font-size: 0.98rem;
-      color: var(--ink-soft);
-    }
+    .wait .note { margin: 0.75rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+    .tiers { font-size: 0.98rem; color: var(--ink-soft); margin: 0.9rem 0 0; }
+    footer { padding: 2rem 0 2.6rem; font-size: 0.98rem; color: var(--ink-soft); }
     footer p { margin: 0 0 0.7rem; }
-    footer .legal {
-      border-top: 1px solid var(--rule);
-      padding-top: 0.9rem;
-      margin-top: 0.4rem;
-      font-size: 0.92rem;
-    }
+    footer .legal { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: 0.4rem; font-size: 0.92rem; }
   </style>
 </head>
 <body>
@@ -295,13 +138,13 @@
       <span>Maker Signal · Experiment 001</span>
       <nav aria-label="Site">
         <a href="index.html">Field Manual</a>
+        <a href="issue-0.html">Issue 0</a>
         <a href="toolkit.html">Toolkit</a>
         <a href="how-i-make-this.html">How I make this</a>
       </nav>
       <span>Compiled 16 August 2026</span>
     </div>
   </header>
-
   <main>
     <div class="hero">
       <div class="wrap">
@@ -314,7 +157,6 @@
         </aside>
       </div>
     </div>
-
     <div class="wrap">
       <section class="price-band" aria-labelledby="price-heading">
         <div>
@@ -327,7 +169,6 @@
           <p class="price-copy price-note">The $30–$49 band is where InsightRaider’s June 2026 cut of 146,271 Gumroad products converts about 28% better than sub-$10 listings. Software averages $39.95. Those are public-listing estimates, not a promise this file will sell. We will not add a $9 impulse SKU.</p>
         </div>
       </section>
-
       <section aria-labelledby="inside">
         <h2 id="inside">What’s inside</h2>
         <p class="lead">One Markdown file. Enough to run next Sunday without reading the four source issues.</p>
@@ -344,7 +185,6 @@
         </ol>
         <p class="tiers">Optional staged tiers, not listed live: $69 Operator pack (source-table spreadsheet, Sunday worksheet, kill-criteria scorecard). $129 Studio pack (four source issues as appendix, X-thread template, 48-hour paid-onboarding draft, “How I make this” kit). Still no live support. Still not for sale.</p>
       </section>
-
       <section class="who" aria-labelledby="audience">
         <h2 id="audience">Who it’s for — and not</h2>
         <div class="split">
@@ -368,7 +208,6 @@
           </div>
         </div>
       </section>
-
       <section aria-labelledby="proof">
         <h2 id="proof">Three numbers we actually opened</h2>
         <p class="lead">Not testimonials. Not screenshots. Each claim links the page we used.</p>
@@ -390,7 +229,11 @@
           </article>
         </div>
       </section>
-
+      <section aria-labelledby="research">
+        <h2 id="research">Read Issue 0 first</h2>
+        <p class="lead">The Field Manual is the operating system. Issue 0 is the sourced brief it was compiled from — still free, still no checkout.</p>
+        <p><a href="issue-0.html">What actually made solo operators money in 2026 — the honest version</a></p>
+      </section>
       <section aria-labelledby="waitlist">
         <h2 id="waitlist">Waitlist</h2>
         <p class="lead">When Tuan can run checkout, this is where a list would live. It does not live here yet.</p>
@@ -407,7 +250,6 @@
       </section>
     </div>
   </main>
-
   <footer>
     <div class="wrap">
       <p>If this reads like a 2024 listicle, we failed. If a solo operator can run next Sunday from the print-out without opening the four issues, we passed. If they would only trust it if we hid the AI, they are not the reader.</p>
