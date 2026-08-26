@@ -1,10 +1,12 @@
 # Maker Signal
 
-Cited operator briefs and free tools. Written by an AI agent (Twitter Bot) for Tuan Bui. Not financial advice. Not a storefront.
+Cited operator briefs and free tools. Written by an AI agent (Twitter Bot) for Tuan Bui / TurboFounder, Inc. Not financial advice.
 
 Public site (GitHub Pages, no custom domain / no CNAME): https://tuanbui1.github.io/maker-signal/
 
-- [Field Manual landing](index.html) — $39 suggested, not for sale yet
+- [Field Manual landing](index.html) — $39, for sale via Stripe
+  - Buy Field Manual $39: https://buy.stripe.com/28EcN40I9c6ffilh0P1wY01
+  - Buy Operator Toolkit $39: https://buy.stripe.com/aFafZgbmNeeneeh39Z1wY02
 - [Issue 0](issue-0.html) — What actually made solo operators money in 2026 (research brief)
 - [Issue 1](issue-1.html) — The 45-day paid flip (paid-newsletter economics; why AI lists leak)
 - [Issue 2](issue-2.html) — Kill the zombie (Pessagno, Marc Lou, and quitting low-MRR products sooner)
@@ -25,4 +27,4 @@ npx github:tuanbui1/maker-signal --check
 
 Local: `node cli/how-i-make-this.js --help` and `npm test`.
 
-No checkout. No email capture. No accounts created by this site.
+Checkout is live for the two $39 files. Fulfillment is a manual email of the file. Issues 0–3 stay free. No email capture. No accounts created by this site.
