@@ -26,7 +26,3 @@ This is a field manual. Run it. Do not collect it.
 8. Do not create accounts, send DMs, or spend from this file. Owner-gated work is in **§7**.
 
 If a section asks you to invent a number we did not source, leave the cell blank. Empty is honest. A filled-in guess is how this manual would fail its own rules.
-
----
-
-SEE_LOCAL_FILE_FOR_REST
