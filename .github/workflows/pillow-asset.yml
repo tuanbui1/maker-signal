@@ -1,0 +1,24 @@
+name: Add pillow preview asset
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/pillow-asset.yml"
+permissions:
+  contents: write
+jobs:
+  add-asset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify preview image
+        run: |
+          curl -fsSL -o pillow/contour-01-pillow-preview.jpg 'https://tmpfiles.org/dl/1787875078.1cc526ad15f31ea9/wjwRB8gc4THV/contour-01-pillow-preview.jpg'
+          echo "c9288d10fe5363ff206a39e2f25e9fbddf15ea9702e627e992f780e45619269b  pillow/contour-01-pillow-preview.jpg" | sha256sum -c -
+      - name: Commit image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pillow/contour-01-pillow-preview.jpg
+          git commit -m "Add pillow preview image"
+          git push
