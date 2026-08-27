@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contour 01 — Matte Art Poster | TurboFounder Inc</title>
+<style>
+  :root {
+    --ink: #22303a;
+    --paper: #f4efe6;
+    --accent: #c05f3c;
+    --muted: #6b7580;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 0;
+  }
+  header .wrap { display: flex; justify-content: space-between; align-items: baseline; }
+  .brand { font-weight: 700; letter-spacing: 0.12em; font-size: 0.9rem; text-transform: uppercase; }
+  .brand-sub { font-size: 0.78rem; color: var(--muted); }
+
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 56px 0; align-items: start; }
+  @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
+
+  .art img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 18px 45px rgba(34, 48, 58, 0.22);
+    border: 1px solid rgba(34, 48, 58, 0.15);
+  }
+  .art figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 10px; }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h1 { font-size: 2.4rem; letter-spacing: 0.02em; margin: 8px 0 4px; }
+  .subtitle { color: var(--muted); font-size: 1.02rem; margin-bottom: 22px; }
+  .desc { margin-bottom: 26px; font-size: 0.97rem; }
+  .desc p + p { margin-top: 10px; }
+
+  .sizes { display: grid; gap: 14px; margin-bottom: 26px; }
+  .size-card {
+    background: var(--card);
+    border: 1px solid rgba(34, 48, 58, 0.18);
+    border-radius: 6px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .size-name { font-weight: 700; font-size: 1.05rem; }
+  .size-detail { font-size: 0.8rem; color: var(--muted); }
+  .price { font-size: 1.5rem; font-weight: 700; }
+  .buy {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .buy:hover { background: #101a21; }
+  .placeholder-note {
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .facts { border-top: 1px solid var(--ink); padding: 40px 0 56px; }
+  .facts h2 { font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+  .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+  .fact h3 { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .fact p { font-size: 0.9rem; }
+
+  footer {
+    border-top: 1px solid var(--ink);
+    padding: 22px 0 34px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  footer p + p { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="brand">TurboFounder Inc</div>
+      <div class="brand-sub">Sold and shipped from the United States</div>
+    </div>
+    <div class="brand-sub">Print shop &mdash; v1</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <figure class="art">
+      <img src="contour-01-preview.jpg" alt="Contour 01 poster: fine dark topographic contour lines with a single terracotta accent line on warm off-white paper, portrait orientation">
+      <figcaption>Shown flat for preview. The poster ships rolled in a tube &mdash; see shipping notes below.</figcaption>
+    </figure>
+
+    <div>
+      <div class="eyebrow">Original print &middot; N&deg; 01</div>
+      <h1>Contour 01</h1>
+      <p class="subtitle">A generative topographic line study. Matte paper poster, printed on demand in the USA.</p>
+
+      <div class="desc">
+        <p>Contour 01 is an original artwork: the elevation lines are generated from a synthetic
+        mathematical landform designed for this print. It is not a map of any real place and contains
+        no third-party map data &mdash; just the quiet geometry of contour lines, with a single
+        terracotta index line running through the field.</p>
+        <p>Printed on enhanced matte paper (10.3&nbsp;mil, 189&nbsp;g/m&sup2;) by Printful at their
+        Charlotte, NC or Dallas, TX facility. Each poster is made when you order it &mdash; nothing
+        sits in a warehouse.</p>
+      </div>
+
+      <div class="sizes" id="checkout">
+        <div class="size-card">
+          <div>
+            <div class="size-name">12&Prime; &times; 16&Prime;</div>
+            <div class="size-detail">Unframed &middot; enhanced matte paper</div>
+          </div>
+          <div class="price">$27</div>
+          <a class="buy" href="https://buy.stripe.com/8x2bJ0duV6LV1rv11R1wY03">Buy 12&times;16 &mdash; $27</a>
+        </div>
+        <div class="size-card">
+          <div>
+            <div class="size-name">18&Prime; &times; 24&Prime;</div>
+            <div class="size-detail">Unframed &middot; enhanced matte paper</div>
+          </div>
+          <div class="price">$33</div>
+          <a class="buy" href="https://buy.stripe.com/5kQ8wOfD3gmv1rv5i71wY04">Buy 18&times;24 &mdash; $33</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <h2>The honest fine print</h2>
+    <div class="facts-grid">
+      <div class="fact">
+        <h3>Shipping</h3>
+        <p>US only for v1. Ships rolled in a tube. Production takes 2&ndash;5 business days at
+        Printful, then 3&ndash;4 business days in US transit. This is made-to-order, not two-day
+        delivery.</p>
+      </div>
+      <div class="fact">
+        <h3>Arrives rolled</h3>
+        <p>Because it ships in a tube, expect some paper curl on arrival. Flattening under books
+        for a day or framing it takes care of this. We recommend framing &mdash; frames are not
+        included.</p>
+      </div>
+      <div class="fact">
+        <h3>The paper</h3>
+        <p>Enhanced matte paper: 10.3&nbsp;mil thick, 189&nbsp;g/m&sup2;, 94% opacity. Water-based
+        inkjet print. Unframed print only.</p>
+      </div>
+      <div class="fact">
+        <h3>Defects &amp; returns</h3>
+        <p>Manufacturing defects (damage, misprints) are reprinted or refunded. Because each
+        poster is printed to order, we can't accept returns for change of mind or wrong size
+        &mdash; please measure your wall first.</p>
+      </div>
+      <div class="fact">
+        <h3>The art</h3>
+        <p>Original generative artwork owned by TurboFounder Inc. No Google, Apple, or
+        OpenStreetMap data, no real street names, no licensed map content.</p>
+      </div>
+      <div class="fact">
+        <h3>Who you're buying from</h3>
+        <p>Sold by TurboFounder Inc. Printing and fulfillment by Printful from their US
+        facilities in Charlotte, NC and Dallas, TX.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 TurboFounder Inc. Contour 01 is an original design.</p>
+    <p>This page makes no ranking or bestseller claims, and every product detail above comes from the printer's published specs.</p>
+  </div>
+</footer>
+
+</body>
+</html>
