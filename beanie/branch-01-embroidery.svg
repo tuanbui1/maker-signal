@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000" role="img" aria-label="Branch 01 persimmon mark">
+  <title>Branch 01 — two persimmons on a branch</title>
+  <rect width="2000" height="2000" fill="#ffffff"/>
+  <desc>Original two-color embroidery mark. Persimmon #D5450E and ink #2C2C31. TurboFounder Inc.</desc>
+
+  <!-- Fruits hang off the branch, not crossed by it -->
+  <g id="fruit" fill="#D5450E">
+    <circle cx="575" cy="900" r="285"/>
+    <circle cx="1430" cy="1295" r="290"/>
+  </g>
+
+  <g id="ink" fill="#2C2C31">
+    <!-- Stem between the two fruits, upper-right to lower-left -->
+    <path d="M1200 340
+             C1110 560, 1035 780, 990 1000
+             C948 1205, 860 1410, 730 1635"
+          fill="none" stroke="#2C2C31" stroke-width="88" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Short laterals to each calyx -->
+    <path d="M1048 760 C960 800, 870 828, 792 842"
+          fill="none" stroke="#2C2C31" stroke-width="58" stroke-linecap="round"/>
+    <path d="M968 1148 C1060 1188, 1165 1224, 1258 1244"
+          fill="none" stroke="#2C2C31" stroke-width="58" stroke-linecap="round"/>
+
+    <!-- Chunky almond leaves as fat ellipses -->
+    <ellipse cx="980" cy="390" rx="210" ry="78" transform="rotate(-58 980 390)"/>
+    <ellipse cx="620" cy="1645" rx="210" ry="78" transform="rotate(-48 620 1645)"/>
+
+    <!-- Four-lobed calyx, left fruit -->
+    <g transform="translate(790 838) rotate(-22)">
+      <circle cx="0" cy="-56" r="56"/>
+      <circle cx="54" cy="-12" r="56"/>
+      <circle cx="22" cy="50" r="54"/>
+      <circle cx="-48" cy="28" r="54"/>
+      <circle cx="4" cy="2" r="42"/>
+    </g>
+    <!-- Four-lobed calyx, right fruit -->
+    <g transform="translate(1254 1238) rotate(24)">
+      <circle cx="0" cy="-58" r="58"/>
+      <circle cx="56" cy="-12" r="58"/>
+      <circle cx="22" cy="52" r="56"/>
+      <circle cx="-50" cy="30" r="56"/>
+      <circle cx="4" cy="2" r="44"/>
+    </g>
+  </g>
+</svg>
