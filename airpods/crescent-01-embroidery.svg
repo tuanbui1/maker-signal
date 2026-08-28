@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000" role="img" aria-label="Crescent 01 moon and star">
+  <title>Crescent 01  cream crescent and terracotta star</title>
+  <rect width="2000" height="2000" fill="#ffffff"/>
+  <defs>
+    <mask id="crescent">
+      <rect width="2000" height="2000" fill="black"/>
+      <circle cx="920" cy="1000" r="420" fill="white"/>
+      <circle cx="1080" cy="960" r="340" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="920" cy="1000" r="420" fill="#E8D9B8" mask="url(#crescent)"/>
+  <g transform="translate(1320 1000)">
+    <polygon fill="#D5450E" points="0,-150 42,-42 150,0 42,42 0,150 -42,42 -150,0 -42,-42"/>
+  </g>
+</svg>
