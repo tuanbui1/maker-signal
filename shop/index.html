@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All prints | TurboFounder Inc</title>
+<style>
+  :root {
+    --ink: #22303a;
+    --paper: #f4efe6;
+    --accent: #c05f3c;
+    --muted: #6b7580;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 0;
+  }
+  header .wrap { display: flex; justify-content: space-between; align-items: baseline; }
+  .brand { font-weight: 700; letter-spacing: 0.12em; font-size: 0.9rem; text-transform: uppercase; }
+  .brand-sub { font-size: 0.78rem; color: var(--muted); }
+
+  .intro { padding: 48px 0 28px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h1 { font-size: 2.4rem; letter-spacing: 0.02em; margin: 8px 0 4px; }
+  .subtitle { color: var(--muted); font-size: 1.02rem; max-width: 38rem; }
+
+  .listings { display: grid; gap: 16px; padding-bottom: 48px; }
+  .listing {
+    background: var(--card);
+    border: 1px solid rgba(34, 48, 58, 0.18);
+    border-radius: 6px;
+    padding: 20px 22px;
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 600px) { .listing { grid-template-columns: 1fr; } }
+  .listing figure { margin: 0; }
+  .listing img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    display: block;
+    background: #ffffff;
+    border: 1px solid rgba(34, 48, 58, 0.15);
+  }
+  .listing.poster img,
+  .listing.pillow img {
+    object-fit: cover;
+  }
+  .listing figcaption { font-size: 0.7rem; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+  .listing h2 { font-size: 1.15rem; margin-bottom: 2px; }
+  .listing h2 a { color: var(--ink); text-decoration: none; }
+  .listing h2 a:hover { text-decoration: underline; }
+  .sku { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+  .price { font-size: 1.02rem; font-weight: 700; margin-bottom: 12px; }
+  .price span { font-weight: 400; font-size: 0.9rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: baseline; }
+  .listing-link { font-size: 0.88rem; color: var(--ink); }
+  .buy {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .buy:hover { background: #101a21; }
+
+  .facts { border-top: 1px solid var(--ink); padding: 40px 0 56px; }
+  .facts h2 { font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+  .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+  .fact h3 { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .fact p { font-size: 0.9rem; }
+
+  footer {
+    border-top: 1px solid var(--ink);
+    padding: 22px 0 34px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  footer p + p { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="brand">TurboFounder Inc</div>
+      <div class="brand-sub">Sold and shipped from the United States</div>
+    </div>
+    <div class="brand-sub">Print shop &mdash; v1</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <div class="eyebrow">Physical merch</div>
+    <h1>All prints</h1>
+    <p class="subtitle">Six live SKUs. Each one is made when you order it. The pictures below are drawings and marks, not photos of finished goods.</p>
+  </section>
+
+  <section class="listings">
+    <article class="listing poster">
+      <figure>
+        <img src="../contour-01/contour-01-preview.jpg" alt="Contour 01 drawing: fine dark topographic contour lines with a single terracotta accent line">
+        <figcaption>Drawing of the print, not a photo of a framed poster.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../contour-01/">Contour 01 poster</a></h2>
+        <div class="sku">Unframed matte paper &middot; two sizes</div>
+        <div class="price">12&times;16 $27 <span>&middot;</span> 18&times;24 $33</div>
+        <div class="links">
+          <a class="listing-link" href="../contour-01/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/8x2bJ0duV6LV1rv11R1wY03">Buy 12&times;16 &mdash; $27</a>
+          <a class="buy" href="https://buy.stripe.com/5kQ8wOfD3gmv1rv5i71wY04">Buy 18&times;24 &mdash; $33</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="listing pillow">
+      <figure>
+        <img src="../pillow/contour-01-pillow-preview.jpg" alt="Contour 01 pillow artwork: the same topographic line drawing composed as a square">
+        <figcaption>Flat drawing of the wrap, not a photo of a sewn pillow.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../pillow/">Contour 01 pillow</a></h2>
+        <div class="sku">18&Prime; &times; 18&Prime; &middot; insert included</div>
+        <div class="price">$36 <span>+ $10.89 US shipping</span></div>
+        <div class="links">
+          <a class="listing-link" href="../pillow/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/9B6fZgaiJgmv1rv6mb1wY05">Buy &mdash; $36 + $10.89 shipping</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="listing">
+      <figure>
+        <img src="../beanie/crescent-01-embroidery.svg" alt="Crescent 01 mark: a cream crescent moon beside a terracotta eight-point star">
+        <figcaption>The embroidery mark, not a photo of a finished beanie.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../beanie/">Crescent 01 beanie</a></h2>
+        <div class="sku">One size &middot; front embroidery</div>
+        <div class="price">$32 <span>+ $4.69 US shipping</span></div>
+        <div class="links">
+          <a class="listing-link" href="../beanie/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/eVqaEWgH78U3b2525V1wY06">Buy &mdash; $32 + $4.69 shipping</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="listing">
+      <figure>
+        <img src="../tumbler/crescent-01-embroidery.svg" alt="Crescent 01 mark: a cream crescent moon beside a terracotta eight-point star">
+        <figcaption>The print mark, not a photo of a finished tumbler.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../tumbler/">Crescent 01 tumbler</a></h2>
+        <div class="sku">20 oz stainless &middot; lid + metal straw</div>
+        <div class="price">$38 <span>+ $10.89 US shipping</span></div>
+        <div class="links">
+          <a class="listing-link" href="../tumbler/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/7sY7sK1Mdfir8TX9yn1wY07">Buy &mdash; $38 + $10.89 shipping</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="listing">
+      <figure>
+        <img src="../crew/crescent-01-embroidery.svg" alt="Crescent 01 mark: a cream crescent moon beside a terracotta eight-point star">
+        <figcaption>The chest-print mark, not a photo of a finished sweatshirt.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../crew/">Crescent 01 crew</a></h2>
+        <div class="sku">Gildan 18000 &middot; Black &middot; S&ndash;XL</div>
+        <div class="price">$44 <span>+ $8.79 US shipping</span></div>
+        <div class="links">
+          <a class="listing-link" href="../crew/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/bJe8wO4Ypdaj5HL7qf1wY08">Buy &mdash; $44 + $8.79 shipping</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="listing">
+      <figure>
+        <img src="../airpods/crescent-01-embroidery.svg" alt="Crescent 01 mark: a cream crescent moon beside a terracotta eight-point star">
+        <figcaption>The print mark, not a photo of a finished case.</figcaption>
+      </figure>
+      <div>
+        <h2><a href="../airpods/">Crescent 01 AirPods case</a></h2>
+        <div class="sku">Black TPU &middot; AirPods or AirPods Pro</div>
+        <div class="price">$26 <span>+ $5.19 US shipping</span></div>
+        <div class="links">
+          <a class="listing-link" href="../airpods/">Listing</a>
+          <a class="buy" href="https://buy.stripe.com/dRm5kC0I93zJ5HL7qf1wY09">Buy &mdash; $26 + $5.19 shipping</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="facts">
+    <h2>The honest fine print</h2>
+    <div class="facts-grid">
+      <div class="fact">
+        <h3>What this page is</h3>
+        <p>An index of physical merch that already has a listing page and a live
+        Stripe Payment Link. It is not a catalog of every TurboFounder file.
+        Digital products are sold from their own pages.</p>
+      </div>
+      <div class="fact">
+        <h3>Shipping</h3>
+        <p>US only for v1. Printful makes each item when you order it:
+        2&ndash;5 business days of production, then standard US transit.
+        This is made-to-order, not two-day delivery. Shipping is shown on
+        each listing and at checkout.</p>
+      </div>
+      <div class="fact">
+        <h3>The pictures</h3>
+        <p>Contour 01 is shown as the print drawing. Crescent 01 is shown as
+        the mark. None of these are photographs of finished, held samples.</p>
+      </div>
+      <div class="fact">
+        <h3>Who you're buying from</h3>
+        <p>Sold by TurboFounder Inc. Printing, sewing, embroidery, and
+        fulfillment by Printful from their US facilities. Checkout is Stripe.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 TurboFounder Inc. Contour 01 and Crescent 01 are original designs.</p>
+    <p>This page makes no ranking or bestseller claims and shows no reviews &mdash; none exist yet. Product details come from the printer's published specs and the live listing pages.</p>
+  </div>
+</footer>
+
+</body>
+</html>
