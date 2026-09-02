@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crescent 01 Tee | TurboFounder Inc</title>
+<style>
+  :root {
+    --ink: #22303a;
+    --paper: #f4efe6;
+    --accent: #c05f3c;
+    --muted: #6b7580;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 0;
+  }
+  header .wrap { display: flex; justify-content: space-between; align-items: baseline; }
+  .brand { font-weight: 700; letter-spacing: 0.12em; font-size: 0.9rem; text-transform: uppercase; }
+  .brand-sub { font-size: 0.78rem; color: var(--muted); }
+  header a { color: inherit; }
+
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 56px 0; align-items: start; }
+  @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
+
+  .art img {
+    width: 100%;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(34, 48, 58, 0.22);
+    border: 1px solid rgba(34, 48, 58, 0.15);
+  }
+  .art figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 10px; }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h1 { font-size: 2.4rem; letter-spacing: 0.02em; margin: 8px 0 4px; }
+  .subtitle { color: var(--muted); font-size: 1.02rem; margin-bottom: 22px; }
+  .desc { margin-bottom: 26px; font-size: 0.97rem; }
+  .desc p + p { margin-top: 10px; }
+
+  .offer {
+    background: var(--card);
+    border: 1px solid rgba(34, 48, 58, 0.18);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-bottom: 26px;
+  }
+  .offer-name { font-weight: 700; font-size: 1.05rem; }
+  .offer-detail { font-size: 0.8rem; color: var(--muted); margin-bottom: 14px; }
+  .price-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .price { font-size: 1.7rem; font-weight: 700; }
+  .ship-note { font-size: 0.9rem; color: var(--ink); }
+  .total-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 16px; }
+  .buy {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .buy:hover { background: #101a21; }
+
+  .facts { border-top: 1px solid var(--ink); padding: 40px 0 56px; }
+  .facts h2 { font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+  .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+  .fact h3 { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .fact p { font-size: 0.9rem; }
+  .fact a { color: var(--ink); }
+
+  footer {
+    border-top: 1px solid var(--ink);
+    padding: 22px 0 34px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  footer p + p { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="brand">TurboFounder Inc</div>
+      <div class="brand-sub">Sold and shipped from the United States</div>
+    </div>
+    <div class="brand-sub"><a href="../shop/">All prints</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <figure class="art">
+      <img src="crescent-01-tee-preview.jpg" alt="Crescent 01 tee illustration: a black short-sleeve shirt with a cream crescent moon and terracotta four-point star on the chest">
+      <figcaption>An illustration of the shirt, not a photo of a finished sample. DTG placement sits a few inches below the collar and can shift a little.</figcaption>
+    </figure>
+
+    <div>
+      <div class="eyebrow">Original DTG chest print &middot; N&deg; 01</div>
+      <h1>Crescent 01 Tee</h1>
+      <p class="subtitle">The crescent-and-star mark, printed on the chest of a Comfort Colors 1717. Sizes S&ndash;XL. Black. Made on demand.</p>
+
+      <div class="desc">
+        <p>An original two-color mark: a cream crescent moon with a terracotta star.
+        Same drawing as the Crescent 01 beanie, placed as a chest print &mdash; not
+        a reprint of the Contour posters or pillow, and not a full-front poster
+        crop. No licensed art.</p>
+        <p>Made on demand by Printful on a Comfort Colors 1717, Black. Chest print.
+        Sizes S&ndash;XL are chosen at Stripe checkout. Nothing sits in a warehouse.
+        We have not worn a sample. This is not the Gildan 18000 crew.</p>
+      </div>
+
+      <div class="offer" id="checkout">
+        <div class="offer-name">Comfort Colors 1717 &middot; Black &middot; S&ndash;XL</div>
+        <div class="offer-detail">DTG chest print &middot; pick size at checkout &middot; SKU TFI-CR01-TEE</div>
+        <div class="price-row">
+          <span class="price">$34</span>
+          <span class="ship-note">+ $4.95 US shipping</span>
+        </div>
+        <div class="total-note">$38.95 total to a US address. Shipping is shown up front &mdash; we do not eat the $4.95. Quantity is 1. Checkout asks for S, M, L, or XL.</div>
+        <a class="buy" href="https://buy.stripe.com/4gMdR8eyZ3zJeeh11R1wY0c">Buy &mdash; $34 + $4.95 shipping</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <h2>The honest fine print</h2>
+    <div class="facts-grid">
+      <div class="fact">
+        <h3>Shipping</h3>
+        <p>US only for v1. Each tee is made when you order it: 2&ndash;5 business days
+        of production at Printful, then standard US transit on top. This is
+        made-to-order, not two-day delivery. US shipping is $4.95.</p>
+      </div>
+      <div class="fact">
+        <h3>What you get</h3>
+        <p>A Comfort Colors 1717, Black, size S, M, L, or XL, with the Crescent 01
+        mark printed on the chest. Adult product. SKU TFI-CR01-TEE.</p>
+      </div>
+      <div class="fact">
+        <h3>Fit &amp; size</h3>
+        <p>Sizes S&ndash;XL only. Size is chosen at Stripe checkout. We have not worn
+        a sample. Use a Comfort Colors 1717 chart if you have one; otherwise pick
+        the size you usually wear in a garment-dyed tee. Size/remorse returns are
+        not accepted on made-to-order garments.</p>
+      </div>
+      <div class="fact">
+        <h3>Care</h3>
+        <p>Follow the care label Printful sews in. We have not washed a sample of
+        this print. We are not adding extra claims.</p>
+      </div>
+      <div class="fact">
+        <h3>Print quality</h3>
+        <p>Direct-to-garment chest print. Cream and terracotta are two flat colors
+        on purpose. Placement is center chest, not a full-front poster. We have
+        not held a sample. Color and placement can shift a few millimeters.</p>
+      </div>
+      <div class="fact">
+        <h3>Defects &amp; returns</h3>
+        <p>Manufacturing defects (damage, failed print, bad seams) are replaced or
+        refunded. Because each tee is made to order, we cannot accept returns
+        for change of mind or fit.</p>
+      </div>
+      <div class="fact">
+        <h3>The art</h3>
+        <p>Original mark owned by TurboFounder Inc. A cream crescent moon and a
+        terracotta star &mdash; not a fruit, not a branch, not a contour map. No
+        licensed characters, no trademarks, no third-party art.</p>
+      </div>
+      <div class="fact">
+        <h3>Who you're buying from</h3>
+        <p>Sold by TurboFounder Inc. Print and fulfillment by Printful. Checkout
+        is Stripe. Quantity is 1.</p>
+      </div>
+      <div class="fact">
+        <h3>Also listed</h3>
+        <p>The same mark on a Gildan 18000 crew lives at
+        <a href="../crew/">/maker-signal/crew/</a>. A tee and a crew are
+        separate Printful shipments.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 TurboFounder Inc. Crescent 01 is an original design.</p>
+    <p>This page makes no ranking or bestseller claims and shows no reviews &mdash; none exist yet. Product details come from the printer's published specs.</p>
+  </div>
+</footer>
+
+</body>
+</html>
